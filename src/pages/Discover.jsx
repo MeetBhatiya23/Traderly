@@ -1,7 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaArrowRightArrowLeft } from "react-icons/fa6";
-import { IoMdArrowDropdown } from "react-icons/io";
+import { IoIosNotifications, IoMdArrowDropdown } from "react-icons/io";
+import {
+  MdNotificationsActive,
+  MdOutlineNotificationsActive,
+} from "react-icons/md";
 
 function Discover() {
   const [descoverData, setDescoverData] = useState([]);
@@ -92,27 +96,67 @@ function Discover() {
   };
 
   return (
-    <div className="px-20 h-[580px]">
+    <div className="px-20 h-[640px]">
+      <div className="flex justify-between items-center pt-5 pb-2">
+        <div className="text-sm">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit{" "}
+        </div>
+        <div className="w-[500px] flex gap-3 justify-between items-center">
+          <div className="text-sm">
+            Incidunt nihil consequatur commodi ipsam accus sapiente rem error
+            accusamus{" "}
+          </div>
+          <div className="flex gap-2 items-center gradiant-button text-black rounded-lg font-semibold px-8 py-1 cursor-pointer">
+            <MdNotificationsActive className="text-3xl " />
+            Subscribe
+          </div>
+        </div>
+      </div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg py-4 rounded-lg">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border border-gray-600 rounded-lg">
           <thead className="text-xs text-[#14c48f] uppercase bg-gray-900 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" className="px-6 py-3">
-                Name
+              <th scope="col" className="px-6 py-3 w-96">
+                <ul className=" flex gap-2 items-center">
+                  <li className="cursor-default">Name</li>
+                  <li className="cursor-pointer">
+                    <IoMdArrowDropdown className="text-lg text-white" />
+                  </li>
+                </ul>
+              </th>
+              <th scope="col" className="px-6 py-3 ">
+                <ul className=" flex gap-2 items-center">
+                  <li className="cursor-default">Price</li>
+                  <li className="cursor-pointer">
+                    <IoMdArrowDropdown className="text-lg text-white" />
+                  </li>
+                </ul>
+              </th>
+              <th scope="col" className="px-6 py-3 w-60">
+                <ul className=" flex gap-2 items-center">
+                  <li className="cursor-default">Discount Percentage</li>
+                  <li className="cursor-pointer">
+                    <IoMdArrowDropdown className="text-lg text-white" />
+                  </li>
+                </ul>
               </th>
               <th scope="col" className="px-6 py-3">
-                Price
+                <ul className=" flex gap-2 items-center">
+                  <li className="cursor-default">Rating</li>
+                  <li className="cursor-pointer">
+                    <IoMdArrowDropdown className="text-lg text-white" />
+                  </li>
+                </ul>
               </th>
-              <th scope="col" className="px-6 py-3">
-                Discount Percentage
+              <th scope="col" className="px-6 py-3 ">
+                <ul className=" flex gap-2 items-center">
+                  <li className="cursor-default">Stock</li>
+                  <li className="cursor-pointer">
+                    <IoMdArrowDropdown className="text-lg text-white" />
+                  </li>
+                </ul>
               </th>
-              <th scope="col" className="px-6 py-3">
-                Rating
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Stock
-              </th>
-              <th scope="col" className="px-6 py-3 text-center">
+              <th scope="col" className="px-6 py-3 text-center cursor-default">
                 Action
               </th>
             </tr>
@@ -348,7 +392,7 @@ function Discover() {
         <div
           id="popup-modal"
           tabindex="-1"
-          className=" overflow-y-auto flex overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 bg-black/50 h-[calc(100%-1rem)] max-h-full"
+          className=" overflow-y-auto flex overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-screen bg-black/50  max-h-full"
         >
           <div className="relative p-4 w-full max-w-md max-h-full">
             <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoIosNotifications } from "react-icons/io";
+import { MdNotificationsActive } from "react-icons/md";
 import { TiArrowSortedDown } from "react-icons/ti";
 
 function Navbar({ activeMenu, setActiveMenu }) {
@@ -65,14 +66,18 @@ function Navbar({ activeMenu, setActiveMenu }) {
             />
             <div className="flex items-center gap-2 justify-center">
               <div className="text-sm">Ethereum</div>
-              <TiArrowSortedDown />        
+              <TiArrowSortedDown />
             </div>
           </div>
           <div className="gradiant-button text-black rounded-lg font-semibold px-5 py-3 cursor-pointer">
             CONNECT WALLET
           </div>
-
-          <IoIosNotifications className="text-3xl" />
+          <div className="relative cursor-pointer">
+            <MdNotificationsActive className="text-3xl" />
+            <div className="absolute inline-flex items-center justify-center w-4 h-4 text-xs font-bold text-white bg-red-500  rounded-full top-0 end-0 dark:border-gray-900">
+              0
+            </div>
+          </div>
 
           <img src="uk-flag.png" alt="" className="w-12  cursor-pointer" />
         </div>

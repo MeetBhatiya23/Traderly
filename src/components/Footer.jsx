@@ -23,10 +23,10 @@ function Footer() {
         </ul>
       </div>
       <div className="flex items-center gap-6">
-        <LiaTelegramPlane className="text-2xl text-gray-400" />
-        <CiTwitter className="text-2xl text-gray-400" />
-        <RxDiscordLogo className="text-2xl text-gray-400" />
-        <FaRegShareSquare className="text-2xl text-gray-400" />
+        <LiaTelegramPlane className="text-2xl text-gray-400 cursor-pointer hover:text-[#14c48f] " />
+        <CiTwitter className="text-2xl text-gray-400 cursor-pointer hover:text-[#14c48f] " />
+        <RxDiscordLogo className="text-2xl text-gray-400 cursor-pointer hover:text-[#14c48f] " />
+        <FaRegShareSquare className="text-2xl text-gray-400 cursor-pointer hover:text-[#14c48f] " />
       </div>
     </div>
   );
