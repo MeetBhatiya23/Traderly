@@ -65,7 +65,7 @@ function Navbar({ activeMenu, setActiveMenu }) {
             />
             <div className="flex items-center gap-2 justify-center">
               <div className="text-sm">Ethereum</div>
-              <TiArrowSortedDown />
+              <TiArrowSortedDown />        
             </div>
           </div>
           <div className="gradiant-button text-black rounded-lg font-semibold px-5 py-3 cursor-pointer">
